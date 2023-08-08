@@ -10,8 +10,12 @@ jobs:
         - name: Step one - Check out code
           uses: actions/checkout@v2
         - name: Step two make file executable
-          run: chmod +x ./Create_files.sh ./amount_files_before.sh
+          run: chmod +x ./Create_files.sh ./amount_files_before.sh amount_files_after.sh cleanup_files.sh
         - name: Step three - Create files
           run: ./Create_files.sh
         - name: Step four - count files
           run: ./amount_files_before.sh
+        - name: Step five - clean up files
+          run: ./cleanup_files.sh
+        - name: Step six - count after files
+        - run: ./amount_files_after.sh

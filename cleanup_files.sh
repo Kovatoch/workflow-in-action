@@ -1,2 +1,2 @@
 #!/bin/bash
-find /tmp/testdir/  -mtime +30 -exec rm {} \;
+find testdir/  -mtime +30 -exec rm {} \;
