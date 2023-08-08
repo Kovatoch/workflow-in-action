@@ -1,13 +1,13 @@
 #!/bin/bash
-if [ ! -d /tmp/testdir ]
+if [ ! -d testdir ]
    then
-    mkdir /tmp/testdir
+    mkdir testdir
 fi
-cd /tmp/testdir
+cd testdir
 
-for ((n=1;n<=49;n++)); 
-  do
-    touch -d "60 days ago" JanFile$n 
+for ((n=1;n<=49;n++));   
+do     
+    touch -d "60 days ago" JanFile$n  
 done
     touch JanFile50
     
