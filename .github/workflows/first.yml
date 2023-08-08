@@ -18,4 +18,4 @@ jobs:
         - name: Step five - clean up files
           run: ./cleanup_files.sh
         - name: Step six - count after files
-        - run: ./amount_files_after.sh
+          run: ./amount_files_after.sh
