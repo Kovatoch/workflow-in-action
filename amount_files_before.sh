@@ -1,5 +1,5 @@
 #!/bin/bash
-cd testdir
+cd testdir || exit
 files=(*)
 
 BEFO=${#files[@]}

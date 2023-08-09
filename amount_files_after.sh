@@ -1,7 +1,7 @@
 #!/bin/bash
 #AFT=$(ls testdir/ | wc -l)
 
-cd testdir
+cd testdir || exit
 files=(*)
 
 AFT=${#files[@]}
