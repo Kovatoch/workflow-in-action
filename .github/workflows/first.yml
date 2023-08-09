@@ -9,6 +9,12 @@ jobs:
         steps:
         - name: Step one - Check out code
           uses: actions/checkout@v2
+        - name: Run ShellCheck
+          uses: azohra/shell-linter@latest
+        - name: Run ShellCheck
+          uses: azohra/shell-linter@latest
+          with:
+            path: "./*.sh"
         - name: Step two make file executable
           run: chmod +x ./Create_files.sh ./amount_files_before.sh amount_files_after.sh cleanup_files.sh
         - name: Step three - Create files
