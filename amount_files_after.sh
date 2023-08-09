@@ -1,4 +1,5 @@
 #!/bin/bash
 AFT=`ls testdir/ | wc -l`
-echo "`date`Der er efter oprydning ${AFT}"
+AFTDATE=`date`
+echo "${AFTDATE} Der er efter oprydning ${AFT}"
 
