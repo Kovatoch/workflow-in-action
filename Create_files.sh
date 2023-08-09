@@ -3,7 +3,7 @@ if [ ! -d testdir ]
    then
     mkdir testdir
 fi
-cd testdir
+cd testdir || exit
 
 for ((n=1;n<=49;n++));   
 do     
