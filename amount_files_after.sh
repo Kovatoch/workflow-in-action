@@ -1,5 +1,11 @@
 #!/bin/bash
-AFT=$(ls testdir/ | wc -l)
+#AFT=$(ls testdir/ | wc -l)
+
+cd testdir
+files=(*)
+
+AFT=${#files[@]}
+
 AFTDATE=$(date)
 echo "${AFTDATE} Der er efter oprydning ${AFT}"
 
