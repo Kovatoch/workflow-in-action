@@ -38,7 +38,9 @@ jobs:
              recurse: true 
              output: results.sarif
              includeDefaultRules: true
-          
+          - name: Step three Clean up files
+            run: Invoke-ScriptAnalyzer -Path .\create-files.ps1
+    
           - name: Step two windows make file executable
             run: powershell.exe .\create-files.ps1
           - name: Step three Clean up files
