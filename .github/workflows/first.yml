@@ -25,3 +25,12 @@ jobs:
           run: ./cleanup_files.sh
         - name: Step six - count after files
           run: ./amount_files_after.sh
+    job2:
+        name: secound job
+        runs-on: windows-latest
+        steps:
+          - name: Step one - Check out code
+            uses: actions/checkout@v2
+          - name: Step one windows make file executable
+            run: create-files.ps1
+  
