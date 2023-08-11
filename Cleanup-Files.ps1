@@ -1,3 +1,18 @@
+# Self test
+
+Install-Module PSScriptAnalyzer
+
+Import-Module PSScriptAnalyzer
+
+$testResult = Invoke-ScriptAnalyzer -Path $MyInvocation.MyCommand.Definition
+
+if ($testResult.Count -ne 0) {
+    Write-Output $testResult
+    exit
+}
+
+Write-Output "Test Passed"
+
 # Paths / Variables
 $pathDirectory = "C:\temp\IAC"
 $pathLog = $pathDirectory + "\test_of_cleanup_scripts.log"
@@ -14,7 +29,7 @@ $fileList = Get-ChildItem -Path $pathDirectory -File
 # Check if date is older than $age[days]
 $fileList | ForEach-Object {
     if ($_.LastWriteTime -lt ((Get-Date).AddDays(-$age))) {
-        Remove-Item -Path $_.FullName -Forse
+        Remove-Item -Path $_.FullName -Force
     }
 }
 
