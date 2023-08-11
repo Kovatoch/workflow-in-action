@@ -1,3 +1,18 @@
+# Self test
+
+Install-Module PSScriptAnalyzer
+
+Import-Module PSScriptAnalyzer
+
+$testResult = Invoke-ScriptAnalyzer -Path $MyInvocation.MyCommand.Definition
+
+if ($testResult.Count -ne 0) {
+    Write-Output $testResult
+    exit
+}
+
+Write-Output "Test Passed"
+
 # Paths
 $pathDirectory = "C:\temp\IAC"
 $pathLog = $pathDirectory + "\test_of_cleanup_scripts.log"
