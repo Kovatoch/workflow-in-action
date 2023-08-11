@@ -32,7 +32,7 @@ jobs:
           - name: Step one - Check out code
             uses: actions/checkout@v2
           - name: Run PSScriptAnalyzer
-            uses: microsoft/psscriptanalyzer-action@v1.0
+            uses: microsoft/psscriptanalyzer-action@v1.1
             with:
              path: .\
              recurse: true 
