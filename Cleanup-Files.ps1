@@ -8,7 +8,7 @@ $testResult = Invoke-ScriptAnalyzer -Path $MyInvocation.MyCommand.Definition
 
 if ($testResult.Count -ne 0) {
     Write-Output $testResult
-    exit
+    exit(42)
 }
 
 Write-Output "Test Passed"

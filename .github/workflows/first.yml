@@ -6,6 +6,7 @@ jobs:
     job1:
         name: First job
         runs-on: ubuntu-latest
+        environment: development
         steps:
         - name: Step one - Check out code
           uses: actions/checkout@v2
@@ -28,6 +29,8 @@ jobs:
     job2:
         name: secound job
         runs-on: windows-latest
+        environment: production
+        needs: job1
         steps:
           - name: Step one - Check out code
             uses: actions/checkout@v2
