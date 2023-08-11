@@ -39,3 +39,11 @@ $fileCountAfter = (Get-ChildItem -Path $pathDirectory -File).count
 # Write log
 "$(Get-Date -Format o) - Running Cleanup-Files.ps1 ..." | Out-File -Append -FilePath $pathLog -Encoding UTF8
 "$(Get-Date -Format o) - $fileCountAfter file(s) in $pathDirectory\" | Out-File -Append -FilePath $pathLog -Encoding UTF8
+
+function flottelotte-hej {
+
+    Write-Host "Det må jeg ikke"
+
+}
+
+$lols = "jeawdfdwa"
