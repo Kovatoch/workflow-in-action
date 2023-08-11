@@ -35,4 +35,8 @@ jobs:
             run: powershell.exe .\create-files.ps1
           - name: Step three Clean up files
             run: powershell.exe .\Cleanup-Files.ps1
+          - name: Perform a Pester test from the .\create-files.ps1 file
+            shell: pwsh
+            run: |
+              Invoke-Pester .\create-files.ps1 -Passthru
   
