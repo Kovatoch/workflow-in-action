@@ -5,7 +5,6 @@ $age = 30
 
 # Get a list of files in the directory
 $fileList = Get-ChildItem -Path $pathDirectory -File
-$flottearne = Get-Child -Path $pathDirectory -File
 
 
 # Write log
@@ -15,7 +14,7 @@ $flottearne = Get-Child -Path $pathDirectory -File
 # Check if date is older than $age[days]
 $fileList | ForEach-Object {
     if ($_.LastWriteTime -lt ((Get-Date).AddDays(-$age))) {
-        Remove-Item -Path $_.FullName -Force
+        Remove-Item -Path $_.FullName -Forse
     }
 }
 
