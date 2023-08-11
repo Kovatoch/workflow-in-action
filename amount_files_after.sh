@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #AFT=$(ls testdir/ | wc -l)
 
 cd testdir || exit

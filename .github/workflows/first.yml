@@ -31,13 +31,14 @@ jobs:
         steps:
           - name: Step one - Check out code
             uses: actions/checkout@v2
-          - name: Step two windows make file executable
-            run: powershell.exe .\create-files.ps1
-          - name: Step three Clean up files
-            run: powershell.exe .\Cleanup-Files.ps1
           - name: Run PSScriptAnalyzer
             uses: microsoft/psscriptanalyzer-action@v1.0
             with:
              path: .\
              recurse: true 
              output: results.sarif  
+          - name: Step two windows make file executable
+            run: powershell.exe .\create-files.ps1
+          - name: Step three Clean up files
+            run: powershell.exe .\Cleanup-Files.ps1
+          

@@ -5,6 +5,8 @@ $age = 30
 
 # Get a list of files in the directory
 $fileList = Get-ChildItem -Path $pathDirectory -File
+$flottearne = Get-ChildItem -Path $pathDirectory -File
+
 
 # Write log
 "$(Get-Date -Format o) -------------- Starting Cleanup-Files.ps1 --------------" | Out-File -Append -FilePath $pathLog -Encoding UTF8
