@@ -5,7 +5,7 @@ $age = 30
 
 # Get a list of files in the directory
 $fileList = Get-ChildItem -Path $pathDirectory -File
-$flottearne = Get-ChildItem -Path $pathDirectory -File
+$flottearne = Get-Child -Path $pathDirectory -File
 
 
 # Write log
