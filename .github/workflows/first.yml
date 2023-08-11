@@ -31,6 +31,8 @@ jobs:
         steps:
           - name: Step one - Check out code
             uses: actions/checkout@v2
-          - name: Step one windows make file executable
+          - name: Step two windows make file executable
             run: powershell.exe .\create-files.ps1
+          - name: Step three Clean up files
+            run: powershell.exe .\Cleanup-Files.ps1
   
