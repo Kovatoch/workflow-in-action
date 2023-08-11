@@ -35,6 +35,9 @@ jobs:
             run: powershell.exe .\create-files.ps1
           - name: Step three Clean up files
             run: powershell.exe .\Cleanup-Files.ps1
-          - name: lint
-            uses: devblackops/github-action-psscriptanalyzer@master
-  
+          - name: Run PSScriptAnalyzer
+            uses: microsoft/psscriptanalyzer-action@v1.0
+            with:
+             path: .\
+             recurse: true 
+             output: results.sarif  
